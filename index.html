@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<button onclick="showBankOnlinePayment()"> With Online Banking </button>
+
+		<dialog id="bankWindow" style="padding: 20px;"> 	
+			<div class="windowText" style="padding: 2em;">
+				<div class="top-row" style="display: inline-block; background-color: #333; color: #fff;">
+					<h2 style="display: inline;"> ONLNE BANKING PAYMENT </h2>  <button onclick="closeWindow()" style="display: inline; margin-left: 2em; border: 1px solid red; background: red; float: right;"> X </button>
+				</div>
+				<hr>
+
+				<span> Account Number :</span> <span id="accountNum"> testNum </span> <br>
+				<span> Total Amount due :</span> <span id="amountDue"> $ XX.XX </span> <br>
+				<span> Due Date: </span> <span id="dueDate"> June 14th 2015 </span> <br>
+
+				<label> Select your online bank login: </label>
+				<select> 
+					<!-- Create a matrix/list for the options -->
+					<option></option>
+					<option> TD Canada</option>
+					<option> Random bank</option>
+					<option> Test Bank</option>
+				</select>
+				<br>
+
+				<button style="display: inline;" onclick="goToBankLogin()"> Go to Bank Login </button> 
+				<button style="display: inline;" onclick="closeWindow()"> CANCEL </button>
+			</div>
+		</dialog>
+
+		<script>
+		var bankWindow = document.getElementById('bankWindow');
+		
+		function showBankOnlinePayment() {
+			bankWindow.showModal();
+
+		}
+
+		function closeWindow() {
+			bankWindow.close();
+		}
+
+		function goToBankLogin() {
+			// will have to read the options, use name and value of the option
+			// gets url from selections
+		}
+		</script>
+
+
+	</body>
+</html>
